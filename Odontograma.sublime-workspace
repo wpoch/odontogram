@@ -1,0 +1,231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!doctype html>\n<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en\"> <![endif]-->\n<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en\"> <!--<![endif]-->\n<head>\n  <meta charset=\"utf-8\">\n\n  <!-- Use the .htaccess and remove these lines to avoid edge case issues.\n       More info: h5bp.com/b/378 -->\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n\n  <title></title>\n  <meta name=\"description\" content=\"\">\n  <meta name=\"author\" content=\"\">\n\n  <!-- Mobile viewport optimized: j.mp/bplateviewport -->\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n\n  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->\n\n  <!-- CSS: implied media=all -->\n  <!-- CSS concatenated and minified via ant build script-->\n  <link rel=\"stylesheet\" href=\"public/css/style.css\">\n  <link rel=\"stylesheet\" href=\"public/css/jquery-ui-1.8.17.custom.css\">\n  <!-- end CSS-->\n\n  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->\n\n  <!-- All JavaScript at the bottom, except for Modernizr / Respond.\n       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries\n       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->\n  <script src=\"public/js/modernizr-2.0.6.min.js\"></script>\n</head>\n\n<body>\n\n  <div id=\"container\">\n    <header>\n      Odontograma\n    </header>\n    <div id=\"main\" role=\"main\">\n      <div id=\"odontograma\">\n      </div>\n      <div>\n      </div>\n    </div>\n    <footer>\n      Clip Soluciones\n    </footer>\n  </div> <!--! end of #container -->\n\n\n  <!-- JavaScript at the bottom for fast page loading -->\n\n  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->\n  <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\n  <script>window.jQuery || document.write('<script src=\"public/js/jquery-1.7.1.min\"><\\/script>')</script>\n\n\n  <!-- scripts concatenated and minified via ant build script-->\n  <script defer src=\"public/js/plugins.js\"></script>\n  <script defer src=\"public/js/jquery-ui-1.8.17.custom.min.js\"></script>\n  <script defer src=\"public/js/knockout-2.0.0.js\"></script>\n  <script defer src=\"public/js/jquery.tmpl.js\"></script>\n  <script defer src=\"public/js/odontograma.js\"></script>\n  <!-- end scripts-->\n\n	\n  <!-- Change UA-XXXXX-X to be your site's ID -->\n  <script>\n    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];\n    Modernizr.load({\n      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'\n    });\n  </script>\n\n\n  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.\n       chromium.org/developers/how-tos/chrome-frame-getting-started -->\n  <!--[if lt IE 7 ]>\n    <script src=\"//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js\"></script>\n    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>\n  <![endif]-->\n  \n</body>\n</html>\n",
+			"file": "index.html",
+			"file_size": 3341,
+			"file_write_time": 129717465879387780,
+			"settings":
+			{
+				"buffer_size": 3366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/odontograma.js",
+			"settings":
+			{
+				"buffer_size": 24,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Documents/Projects/Odontograma/public/css/jquery-ui-1.8.17.custom.css",
+		"/D/Desktop/fix.rb",
+		"/D/Downloads/Wall-E[2008]DvDrip-aXXo/Wall-E[2008]DvDrip-aXXo.srt",
+		"/D/Downloads/The.Woman.2011.720p.MP4.BRRip.x264.[HOLLANDmovies]/The.Woman.2011.720p.MP4.BRRip.x264.[HOLLANDmovies].srt",
+		"/D/Downloads/Black Swan {2010} DVDRIP. Jaybob/Black Swan {2010} DVDRIP. Jaybob .srt",
+		"/D/Downloads/Donnie Darko[2001]DvDrip[Eng]-Bugz/Donnie Darko[2001]DvDrip[Eng]-Bugz.srt",
+		"/C/regex.rb",
+		"/C/test.rb",
+		"/C/test2.rb",
+		"/C/	from C",
+		"/C/renaming D",
+		"/C/Chalk talk for sensor and location support in WindowsC",
+		"/C/Certifying hardware with the Windows Hardware Certification KitC",
+		"/C/Ruby192/lib/ruby/site_ruby/1.9.1/rubygems/custom_require.rb",
+		"/C/Users/wpoch/Dropbox/Documents/Phone/efs/imei/bt.txt",
+		"/C/Users/wpoch/Dropbox/Documents/Phone/efs/nv.log",
+		"/C/Users/wpoch/Dropbox/Documents/Phone/efs/nv_data.bin",
+		"/D/Downloads/The Walking Dead Season 1 Complete 720p/The.Walking.Dead.S01E01.720p.HDTV.x264.srt",
+		"/D/Downloads/Captain.America.The.First.Avenger.2011.720p.BRRip.XviD.AC3-ViSiON/Captain.America.The.First.Avenger.2011.720p.BRRip.XviD.AC3-ViSiON.srt",
+		"/D/Desktop/Adobe CS5/payloads/Setup.xml"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"url(images/",
+			"<script defer src=\"public/js/script.js\"></script>",
+			">",
+			"The complete developer's guide to the SkyDrive API"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"url(../images/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 3366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1811,
+								1811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/js/odontograma.js",
+					"settings":
+					{
+						"buffer_size": 24,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
