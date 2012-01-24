@@ -14,4 +14,12 @@ jQuery(function(){
 	vm.dientes.push(diente);
 
 	ko.applyBindings(vm);
+
+	var xmlns = "http://www.w3.org/2000/svg";	
+	var r1 = document.createElementNS(xmlns,"rect");
+	r1.setAttributeNS(null, "x", "1cm");
+	r1.setAttributeNS(null, "y", "1cm");
+	r1.setAttributeNS(null, "width", "1cm");
+	r1.setAttributeNS(null, "height", "1cm");
+	document.getElementById("svg").appendChild(r1);
 });
