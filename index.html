@@ -25,6 +25,7 @@
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="public/css/jquery-ui-1.8.17.custom.css">
+  <link rel="stylesheet" href="public/css/jquery.svg.css">
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -42,14 +43,7 @@
       Odontograma
     </header>
     <div id="main" role="main">
-      <div id="odontograma">
-        <svg id="svg" version="1.1" height="400px" width="500px" xmlns="http://www.w3.org/2000/svg">          
-          <!-- Show outline of canvas using 'rect' element -->
-          <rect x=".01cm" y=".01cm" width="4.98cm" height="4.98cm"
-                fill="none" stroke="blue" stroke-width=".02cm"/>    
-
-        </svg>
-      </div>
+      <div id="odontograma" data-bind="renderSvg: dientes"> </div>
     </div>
     <footer>
       Clip Soluciones
@@ -62,7 +56,8 @@
   <script defer src="public/js/jquery-ui-1.8.17.custom.min.js"></script>
   <script defer src="public/js/jquery.tmpl.js"></script>
   <script defer src="public/js/knockout-2.0.0.js"></script>
-  <script defer src="public/js/raphael-min"></script>  
+  <script defer src="public/js/jquery.svg.min.js"></script>  
+  <script defer src="public/js/jquery.svggraph.min.js"></script>  
   <script defer src="public/js/odontograma.js"></script>
   <!-- end scripts-->
 
