@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"trata",
+				"tratamiento"
+			],
+			[
+				"caras",
+				"caras"
+			],
+			[
+				"cara",
+				"caraDerecha"
+			],
+			[
+				"tra",
+				"tratamientosAplicados"
+			],
+			[
+				"rend",
+				"renderSvg"
+			],
+			[
+				"re",
+				"renderSvg"
+			],
+			[
+				"obs",
+				"observableArray"
+			],
+			[
+				"die",
+				"diente"
+			],
+			[
+				"trat",
+				"tratamiento"
+			],
+			[
+				"ca",
+				"caraSuperior"
+			],
+			[
+				"val",
+				"valueUnwrapped"
+			],
+			[
 				"stroke",
 				"strokeWidth"
 			]
@@ -11,30 +55,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "public/js/odontograma.js",
-			"settings":
-			{
-				"buffer_size": 1994,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "old/odontograma.htm",
-			"settings":
-			{
-				"buffer_size": 54316,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3268,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -60,6 +80,18 @@
 	},
 	"file_history":
 	[
+		"/D/Documents/Projects/Odontograma/index.html",
+		"/D/Documents/Projects/Odontograma/public/js/odontograma.js",
+		"/D/Documents/Projects/Odontograma/public/css/odontograma.css",
+		"/D/Documents/Projects/Odontograma/old/odontograma.htm",
+		"//se2test/PaseProduccion/2011/SFEmpresas/ProximoPase/SQL/002_ActualizacionPerfilesAutorizadores.sql",
+		"//se2test/PaseProduccion/2011/SFEmpresas/ProximoPase/SQL/000_AsignacionPerfilesMensajes.sql",
+		"//se2test/PaseProduccion/2011/SFEmpresas/ProximoPase/SQL/001_PDC.sql",
+		"//se2test/PaseProduccion/2011/SFEmpresas/ProximoPase/SQL/007_PDC.sql",
+		"/D/Documents/Projects/Odontograma/estado_odontograma.js",
+		"/D/Documents/Projects/Odontograma/tratamientos.js",
+		"/D/Documents/Projects/sicemed/Sicemed/Sicemed.Web/Content/mocks/ObtenerTurno/ObtenerEspecialidades.js",
+		"/D/Documents/Projects/Odontograma/public/js/tratamientos.js",
 		"/D/Desktop/r.xml",
 		"/D/Documents/Projects/Odontograma/public/css/jquery-ui-1.8.17.custom.css",
 		"/D/Desktop/fix.rb",
@@ -98,6 +130,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"drawDiente",
+			":\"true\"",
+			":\"false\"",
+			"\"aplicaCara\":\"true\"",
+			"render",
+			"\"tratamiento\":",
+			"\"},",
+			"'",
+			"', tratamiento:'",
+			"{ id:",
+			"tratamiento",
+			"id",
+			"</option>",
+			"\">",
+			"<option value=\"",
 			"1cm",
 			"url(images/",
 			"<script defer src=\"public/js/script.js\"></script>",
@@ -110,6 +157,19 @@
 		"regex": false,
 		"replace_history":
 		[
+			":true",
+			":false",
+			"\"aplicaCara\":true",
+			"\"nombre\":",
+			"\", \"aplicaCara\":\"true\", \"aplicaDiente\":\"true\" },",
+			"\"",
+			"', 'tratamiento':'",
+			"{ 'id':",
+			"'tratamiento'",
+			"'id'",
+			"'},",
+			"', tratamiento:'",
+			"{ id:'",
 			"url(../images/"
 		],
 		"reverse": false,
@@ -121,98 +181,13 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "public/js/odontograma.js",
-					"settings":
-					{
-						"buffer_size": 1994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1678,
-								1678
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 459.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 1,
-					"file": "old/odontograma.htm",
-					"settings":
-					{
-						"buffer_size": 54316,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1882,
-								1882
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 400.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 3268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1845,
-								1875
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 480.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
