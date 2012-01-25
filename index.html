@@ -48,10 +48,21 @@
         <select 
           data-bind=" options: tratamientosPosibles, 
                       value: tratamientoSeleccionado, 
-                      optionsText: function(item){ return item.tratamiento; },
+                      optionsText: function(item){ return item.nombre; },
                       optionsCaption: 'Seleccione un tratamiento...'">
+        </select>
       </div>
-      <div id="odontograma" data-bind="renderSvg: dientes"> </div>
+      <div id="odontograma"></div>
+      <ul data-bind="foreach: tratamientosAplicados">
+        <li>
+          <ul>
+            <li>Diente: <span data-bind="text: diente.id"></span></li>
+            <li>Tratamiento: <span data-bind="text: tratamiento.nombre"></span></li>
+            <li>Cara: <span data-bind="text: cara"></span></li>
+            <li><a href="#" data-bind="click: $parent.quitarTratamiento">Eliminar</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <footer>
       Clip Soluciones
