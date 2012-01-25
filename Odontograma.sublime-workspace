@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"stroke",
+				"strokeWidth"
+			]
 		]
 	},
 	"buffers":
@@ -11,7 +15,7 @@
 			"file": "public/js/odontograma.js",
 			"settings":
 			{
-				"buffer_size": 1269,
+				"buffer_size": 1994,
 				"line_ending": "Windows"
 			}
 		},
@@ -27,7 +31,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3139,
+				"buffer_size": 3268,
 				"line_ending": "Windows"
 			}
 		}
@@ -125,15 +129,15 @@
 					"file": "public/js/odontograma.js",
 					"settings":
 					{
-						"buffer_size": 1269,
+						"buffer_size": 1994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								948,
-								948
+								1678,
+								1678
 							]
 						],
 						"settings":
@@ -142,7 +146,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11.0,
+						"translation.y": 459.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -150,7 +154,7 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -165,8 +169,8 @@
 						"selection":
 						[
 							[
-								1111,
-								1111
+								1882,
+								1882
 							]
 						],
 						"settings":
@@ -175,7 +179,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 12192.0,
+						"translation.y": 400.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -185,15 +189,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 3139,
+						"buffer_size": 3268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2340,
-								2340
+								1845,
+								1875
 							]
 						],
 						"settings":
@@ -204,7 +208,7 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
