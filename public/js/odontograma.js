@@ -9,30 +9,38 @@ jQuery(function(){
 
 		var caraSuperior = svg.polygon(dienteGroup,
 			[[0,0],[20,0],[15,5],[5,5]],  
-		    defaultPolygon);			
+		    defaultPolygon);
+	    caraSuperior = $(caraSuperior).data('cara', 'S');
 		
 		var caraInferior =  svg.polygon(dienteGroup,
 			[[5,15],[15,15],[20,20],[0,20]],  
 		    defaultPolygon);			
-		
+		caraInferior = $(caraInferior).data('cara', 'I');
+
 		var caraDerecha = svg.polygon(dienteGroup,
 			[[15,5],[20,0],[20,20],[15,15]],  
 		    defaultPolygon);
+	    caraDerecha = $(caraDerecha).data('cara', 'D');
 		
 		var caraIzquierda = svg.polygon(dienteGroup,
 			[[0,0],[5,5],[5,15],[0,20]],  
 		    defaultPolygon);
+		caraIzquierda = $(caraIzquierda).data('cara', 'Z');		    
 		
 		var caraCentral = svg.polygon(dienteGroup,
 			[[5,5],[15,5],[15,15],[5,15]],  
-		    defaultPolygon);			
+		    defaultPolygon);	
+		caraCentral = $(caraCentral).data('cara', 'C');		    
 	    
 	    svg.text(dienteGroup, 6, 30, diente.id.toString(), 
 	    	{fill: 'navy', stroke: 'navy', strokeWidth: 0.1, style: 'font-size: 6pt;font-weight:normal'});
     	
 		$.each([caraCentral, caraIzquierda, caraDerecha, caraInferior, caraSuperior], function(index, value){
-	    	$(value).click(function(){
-	    		console.log('click ' + diente.id);
+	    	value.click(function(){
+	    		var cara = $(this).data('cara');
+
+	    		console.log('click: Diente: ' + diente.id + ' - Cara: ' + cara);	    		
+
 	    	}).mouseenter(function(){
 	    		var me = $(this);
 	    		me.attr('fill', 'yellow');
@@ -65,6 +73,8 @@ jQuery(function(){
 
 	function ViewModel(){
 		this.dientes = ko.observableArray([]);
+		this.tratamientosPosibles = ko.observableArray([]);
+		this.tratamientoSeleccionado = ko.observable(null);
 	};
 
 	function DienteModel(id, x, y){
@@ -75,6 +85,8 @@ jQuery(function(){
 	};
 
 	vm = new ViewModel();
+	//Cargo los dientes
+
 	//Dientes izquierdos
 	for(var i = 0; i < 8; i++){
 		vm.dientes.push(new DienteModel(18 - i, i * 25, 0));	
@@ -101,5 +113,13 @@ jQuery(function(){
 	for(var i = 0; i < 8; i++){
 		vm.dientes.push(new DienteModel(31 + i, i * 25 + 210, 3 * 40));	
 	}	
-	ko.applyBindings(vm);
+	//Cargo los tratamientos
+	$.getJSON('tratamientos.js', function(d){
+		for (var i = d.length - 1; i >= 0; i--) {
+			var tratamiento = d[i];
+			vm.tratamientosPosibles.push(tratamiento);
+		};
+		
+		ko.applyBindings(vm);
+	});
 });

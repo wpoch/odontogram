@@ -42,7 +42,15 @@
     <header>
       Odontograma
     </header>
-    <div id="main" role="main">
+    <div id="main" role="main">      
+      <div>
+        <label>Tratamiento:</label>
+        <select 
+          data-bind=" options: tratamientosPosibles, 
+                      value: tratamientoSeleccionado, 
+                      optionsText: function(item){ return item.tratamiento; },
+                      optionsCaption: 'Seleccione un tratamiento...'">
+      </div>
       <div id="odontograma" data-bind="renderSvg: dientes"> </div>
     </div>
     <footer>
