@@ -64,8 +64,20 @@ jQuery(function(){
 					return false;
 				}
 
-				//TODO: Agregar las validaciones necesarias
+				//Validaciones
+				//Validamos el tratamiento
 				var tratamiento = vm.tratamientoSeleccionado();
+
+				if(cara == 'X' && !tratamiento.aplicaDiente){
+					alert('El tratamiento seleccionado no se puede aplicar a toda la pieza.');
+					return false;
+				}
+				if(cara != 'X' && !tratamiento.aplicaCara){
+					alert('El tratamiento seleccionado no se puede aplicar a una cara.');
+					return false;
+				}
+				//TODO: Validaciones de si la cara tiene tratamiento o no, etc...
+
 				vm.tratamientosAplicados.push({diente: diente, cara: cara, tratamiento: tratamiento});
 				vm.tratamientoSeleccionado(null);
 				

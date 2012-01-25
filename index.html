@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="public/css/jquery-ui-1.8.17.custom.css">
   <link rel="stylesheet" href="public/css/jquery.svg.css">
+  <link rel="stylesheet" href="public/css/odontograma.css">
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -40,32 +41,34 @@
 
   <div id="container">
     <header>
-      Odontograma
+      <h1>Clip Soluciones<h1>
     </header>
     <div id="main" role="main">      
-      <div>
-        <label>Tratamiento:</label>
+      <div id="tratamiento">
+        <h2>Tratamiento</h2>
         <select 
           data-bind=" options: tratamientosPosibles, 
                       value: tratamientoSeleccionado, 
                       optionsText: function(item){ return item.nombre; },
                       optionsCaption: 'Seleccione un tratamiento...'">
         </select>
+        <ul data-bind="foreach: tratamientosAplicados">
+          <li>
+            P<span data-bind="text: diente.id"></span><span data-bind="text: cara"></span>
+            -            
+            <span data-bind="text: tratamiento.nombre"></span>
+            | 
+            <a href="#" data-bind="click: $parent.quitarTratamiento">Eliminar</a>
+          </li>
+        </ul>
       </div>
-      <div id="odontograma"></div>
-      <ul data-bind="foreach: tratamientosAplicados">
-        <li>
-          <ul>
-            <li>Diente: <span data-bind="text: diente.id"></span></li>
-            <li>Tratamiento: <span data-bind="text: tratamiento.nombre"></span></li>
-            <li>Cara: <span data-bind="text: cara"></span></li>
-            <li><a href="#" data-bind="click: $parent.quitarTratamiento">Eliminar</a></li>
-          </ul>
-        </li>
-      </ul>
+      <div id="odontograma-wrapper">
+        <h2>Odontograma</h2>
+        <div id="odontograma"></div>
+      </div>      
     </div>
     <footer>
-      Clip Soluciones
+      
     </footer>
   </div> <!--! end of #container -->  
 
