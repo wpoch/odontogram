@@ -1,53 +1,64 @@
 jQuery(function(){
 
-	function drawDiente(svg, id, x, y){
-		x = x || 0;
-		y = y || 0;
+	function drawDiente(svg, parentGroup, diente){
+		if(!diente) throw new Error('Error no se ha especificado el diente.');
+		var x = diente.x || 0,
+			y = diente.y || 0;
 		var defaultPolygon = {fill: 'white', stroke: 'navy', strokeWidth: 0.5};
-		var g = svg.group({transform: 'translate('+x+','+y+')'});
-		svg.polygon(g,
+		var dienteGroup = svg.group(parentGroup, {transform: 'translate(' + x + ',' + y + ')'});
+
+		var caraSuperior = svg.polygon(dienteGroup,
 			[[0,0],[20,0],[15,5],[5,5]],  
 		    defaultPolygon);			
-		svg.polygon(g,
+		
+		var caraInferior =  svg.polygon(dienteGroup,
 			[[5,15],[15,15],[20,20],[0,20]],  
 		    defaultPolygon);			
-		svg.polygon(g,
+		
+		var caraDerecha = svg.polygon(dienteGroup,
 			[[15,5],[20,0],[20,20],[15,15]],  
 		    defaultPolygon);
-		svg.polygon(g,
+		
+		var caraIzquierda = svg.polygon(dienteGroup,
 			[[0,0],[5,5],[5,15],[0,20]],  
 		    defaultPolygon);
-		var v = svg.polygon(g,
+		
+		var caraCentral = svg.polygon(dienteGroup,
 			[[5,5],[15,5],[15,15],[5,15]],  
 		    defaultPolygon);			
-	    svg.text(g, 6, 30, id.toString(), 
+	    
+	    svg.text(dienteGroup, 6, 30, diente.id.toString(), 
 	    	{fill: 'navy', stroke: 'navy', strokeWidth: 0.1, style: 'font-size: 6pt;font-weight:normal'});
-    	var v = $(v);
-    	v.click(function(){
-    		console.log('click ' + id);
-    		vm.dientes.push(new DienteModel(id, 1,5));	
-    	}).mouseenter(function(){
-    		var me = $(this);
-    		me.attr('fill', 'yellow');
-    	}).mouseleave(function(){
-    		var me = $(this);
-    		me.attr('fill', 'white');
-    	});
+    	
+		$.each([caraCentral, caraIzquierda, caraDerecha, caraInferior, caraSuperior], function(index, value){
+	    	$(value).click(function(){
+	    		console.log('click ' + diente.id);
+	    	}).mouseenter(function(){
+	    		var me = $(this);
+	    		me.attr('fill', 'yellow');
+	    	}).mouseleave(function(){
+	    		var me = $(this);
+	    		me.attr('fill', 'white');
+	    	});			
+		});
 	};
 
 
 	ko.bindingHandlers.renderSvg = {
 	    init: function(element, valueAccessor, allBindingsAccessor, viewModel) {
-	        $(element).svg();
+	        $(element).svg({
+		        settings:{ width: '620px', height: '250px' }
+		    });
 	    },
 	    update: function(element, valueAccessor, allBindingsAccessor, viewModel) {
 			var svg = $(element).svg('get').clear();
+			var parentGroup = svg.group({transform: 'scale(1.5)'});
 			var value = valueAccessor();
 			var valueUnwrapped = ko.utils.unwrapObservable(value); 
 			for (var i = valueUnwrapped.length - 1; i >= 0; i--) {
 				var diente = valueUnwrapped[i];
 				var dienteUnwrapped = ko.utils.unwrapObservable(diente); 
-				drawDiente(svg, diente.id, diente.x, diente.y);
+				drawDiente(svg, parentGroup, dienteUnwrapped);
 			};
 	    }
 	};
