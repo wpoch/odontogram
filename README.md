@@ -1,4 +1,0 @@
-Odontograma
-===========
-
-Odontograma
