@@ -69,6 +69,33 @@ export default function Odontogram({
         role="img"
         aria-label="Odontograma interactivo"
       >
+        <defs>
+          <linearGradient id="tooth-shell-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#e8f1f7" />
+          </linearGradient>
+          <linearGradient id="tooth-face-idle" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#fdfefe" />
+            <stop offset="100%" stopColor="#edf5fb" />
+          </linearGradient>
+          <linearGradient id="tooth-face-hover" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#fff5dd" />
+            <stop offset="100%" stopColor="#ffe3b5" />
+          </linearGradient>
+          <linearGradient id="tooth-face-applied" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ea6a74" />
+            <stop offset="100%" stopColor="#ca3e4c" />
+          </linearGradient>
+          <filter id="tooth-drop-shadow" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow
+              dx="0.2"
+              dy="0.45"
+              stdDeviation="0.45"
+              floodOpacity="0.28"
+              floodColor="#19506f"
+            />
+          </filter>
+        </defs>
         <g transform="scale(1.5)">
           {teeth.map((tooth) => (
             <Tooth
