@@ -1,0 +1,131 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  line-height: 1.35;
+  color: #132642;
+  background: linear-gradient(160deg, #f4f8ff 0%, #eef8f2 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.app-header {
+  margin-bottom: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #385472;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.panel,
+.odontogram-shell {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #bfd3e3;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 26px rgba(31, 62, 89, 0.08);
+}
+
+.panel h2,
+.odontogram-shell h2 {
+  margin: 0 0 0.75rem;
+}
+
+.treatment-select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #b6c9da;
+  border-radius: 10px;
+  background: #fff;
+  color: #122a43;
+}
+
+.applied-list {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  max-height: 430px;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.applied-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #d2e0ec;
+  border-radius: 10px;
+  background: #f8fbff;
+  font-size: 0.93rem;
+}
+
+.remove-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.25rem 0.55rem;
+  background: #ffe2de;
+  color: #a62e21;
+  font-weight: 600;
+}
+
+.remove-button:hover {
+  background: #ffcfc8;
+}
+
+.odontogram-svg {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d2e0ec;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.tooth-face {
+  cursor: pointer;
+  transition: fill 0.14s ease;
+}
+
+.tooth-label {
+  cursor: pointer;
+  user-select: none;
+  font-size: 6px;
+  font-weight: 400;
+}
+
+@media (max-width: 960px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .applied-list {
+    max-height: 260px;
+  }
+}
