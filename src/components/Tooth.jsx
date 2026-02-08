@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  FACE_HIT_POLYGONS,
   FACE_LABELS,
   FACE_ORDER,
   FACE_PATHS,
@@ -30,6 +31,17 @@ const LABEL_THEME = {
     text: "#fff9fb",
   },
 };
+
+function pointsToString(points) {
+  return points.map(([x, y]) => `${x},${y}`).join(" ");
+}
+
+const FACE_HIT_POLYGON_POINTS = Object.fromEntries(
+  Object.entries(FACE_HIT_POLYGONS).map(([face, points]) => [
+    face,
+    pointsToString(points),
+  ]),
+);
 
 function makeHoverPayload(toothId, face) {
   return {
@@ -116,14 +128,13 @@ export default function Tooth({
             strokeLinejoin="round"
             pointerEvents="none"
           />
-          <path
+          <polygon
             className={`tooth-face-hitzone ${
               isTreatmentSelected ? "tooth-face-hitzone--ready" : "tooth-face-hitzone--idle"
             }`}
-            d={FACE_PATHS[face]}
-            fill="transparent"
-            stroke="transparent"
-            strokeWidth={2.3}
+            points={FACE_HIT_POLYGON_POINTS[face]}
+            fill="rgba(18, 78, 112, 0.001)"
+            stroke="none"
             pointerEvents="all"
             tabIndex={0}
             role="button"
@@ -138,7 +149,7 @@ export default function Tooth({
             <title>
               P{tooth.id} - {FACE_LABELS[face]}
             </title>
-          </path>
+          </polygon>
         </g>
       ))}
       <path

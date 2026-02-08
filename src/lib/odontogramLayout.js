@@ -20,6 +20,40 @@ export const FACE_PATHS = {
   C: "M6.2 7.2 Q10 6.1 13.8 7.2 Q14.9 10 13.8 12.8 Q10 13.9 6.2 12.8 Q5.1 10 6.2 7.2 Z",
 };
 
+// Interaction zones are intentionally larger than visual faces for easier clicking.
+export const FACE_HIT_POLYGONS = {
+  S: [
+    [1.8, 1.6],
+    [18.2, 1.6],
+    [14.5, 8.1],
+    [5.5, 8.1],
+  ],
+  D: [
+    [14.5, 5.6],
+    [18.8, 1.6],
+    [18.8, 18.4],
+    [14.5, 14.4],
+  ],
+  I: [
+    [5.5, 11.9],
+    [14.5, 11.9],
+    [18.2, 18.4],
+    [1.8, 18.4],
+  ],
+  Z: [
+    [1.2, 1.6],
+    [5.5, 5.6],
+    [5.5, 14.4],
+    [1.2, 18.4],
+  ],
+  C: [
+    [5.5, 5.6],
+    [14.5, 5.6],
+    [14.5, 14.4],
+    [5.5, 14.4],
+  ],
+};
+
 function pushTeeth(target, count, idFactory, xFactory, y) {
   for (let i = 0; i < count; i += 1) {
     target.push({
