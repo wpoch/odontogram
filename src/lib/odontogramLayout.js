@@ -1,5 +1,14 @@
 export const FACE_ORDER = ["S", "I", "D", "Z", "C"];
 
+export const FACE_LABELS = {
+  S: "Cara superior",
+  I: "Cara inferior",
+  D: "Cara distal",
+  Z: "Cara mesial",
+  C: "Cara central",
+  X: "Pieza completa",
+};
+
 export const FACE_POLYGONS = {
   S: [
     [0, 0],
