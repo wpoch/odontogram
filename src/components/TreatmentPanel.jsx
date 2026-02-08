@@ -21,7 +21,6 @@ function badgeText(enabled) {
 export default function TreatmentPanel({
   treatments,
   selectedTreatment,
-  selectedTreatmentId,
   onSelectTreatment,
   appliedTreatments,
   onRemoveTreatment,
@@ -92,11 +91,8 @@ export default function TreatmentPanel({
     setIsOpen(true);
     setActiveIndex(0);
 
-    if (selectedTreatmentId && selectedTreatment) {
-      const currentDisplay = formatTreatment(selectedTreatment);
-      if (nextValue !== currentDisplay) {
-        onSelectTreatment("");
-      }
+    if (!nextValue.trim()) {
+      onSelectTreatment("");
     }
 
     const exactByCode = treatments.find(
@@ -137,6 +133,12 @@ export default function TreatmentPanel({
     if (event.key === "Enter" && isOpen) {
       event.preventDefault();
       selectTreatment(visible[activeIndex] ?? visible[0]);
+      return;
+    }
+
+    if (event.key === "Enter" && !isOpen && visible.length > 0 && !selectedTreatment) {
+      event.preventDefault();
+      selectTreatment(visible[0]);
       return;
     }
 
@@ -251,8 +253,10 @@ export default function TreatmentPanel({
               role="option"
               aria-selected={index === activeIndex}
               onMouseEnter={() => setActiveIndex(index)}
-              onMouseDown={(event) => event.preventDefault()}
-              onClick={() => selectTreatment(treatment)}
+              onMouseDown={(event) => {
+                event.preventDefault();
+                selectTreatment(treatment);
+              }}
             >
               <span className="autocomplete-code">{treatment.id}</span>
               <span className="autocomplete-name">{treatment.nombre}</span>

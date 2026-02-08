@@ -107,6 +107,7 @@ export default function Tooth({
           stroke={FACE_STROKE}
           strokeWidth={0.42}
           strokeLinejoin="round"
+          pointerEvents="all"
           tabIndex={0}
           role="button"
           aria-label={`Pieza ${tooth.id}, ${FACE_LABELS[face]}`}

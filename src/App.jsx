@@ -169,7 +169,6 @@ export default function App() {
         "success",
       ),
     );
-    setSelectedTreatmentId("");
   };
 
   const handleRemoveTreatment = (entryId) => {
@@ -258,7 +257,6 @@ export default function App() {
         <TreatmentPanel
           treatments={treatments}
           selectedTreatment={selectedTreatment}
-          selectedTreatmentId={selectedTreatmentId}
           onSelectTreatment={setSelectedTreatmentId}
           appliedTreatments={appliedTreatmentsEnriched}
           onRemoveTreatment={handleRemoveTreatment}
