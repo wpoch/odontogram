@@ -198,6 +198,7 @@ export default function TreatmentPanel({
       <div className="autocomplete-wrap">
         <input
           id="treatment-autocomplete"
+          data-testid="treatment-autocomplete-input"
           className="autocomplete-input"
           type="text"
           autoComplete="off"
@@ -268,7 +269,9 @@ export default function TreatmentPanel({
       <div className="selected-treatment-card">
         {selectedTreatment ? (
           <>
-            <p className="selected-code">{selectedTreatment.id}</p>
+            <p className="selected-code" data-testid="selected-treatment-code">
+              {selectedTreatment.id}
+            </p>
             <p className="selected-name">{selectedTreatment.nombre}</p>
             <div className="capability-row">
               <span
@@ -320,7 +323,11 @@ export default function TreatmentPanel({
       ) : (
         <ul className="applied-list">
           {appliedTreatments.map((item) => (
-            <li key={item.entryId} className="applied-item">
+            <li
+              key={item.entryId}
+              className="applied-item"
+              data-testid="applied-treatment-item"
+            >
               <div className="applied-meta">
                 <span className="applied-location">
                   P{item.toothId} · {FACE_LABELS[item.face] ?? item.face}

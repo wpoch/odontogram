@@ -132,6 +132,7 @@ export default function Tooth({
             className={`tooth-face-hitzone ${
               isTreatmentSelected ? "tooth-face-hitzone--ready" : "tooth-face-hitzone--idle"
             }`}
+            data-testid={`face-hit-${tooth.id}-${face}`}
             points={FACE_HIT_POLYGON_POINTS[face]}
             fill="rgba(18, 78, 112, 0.001)"
             stroke="none"
@@ -161,6 +162,7 @@ export default function Tooth({
         className={`tooth-label-hitbox ${
           isTreatmentSelected ? "tooth-label-hitbox--ready" : "tooth-label-hitbox--idle"
         }`}
+        data-testid={`tooth-hit-${tooth.id}-X`}
         role="button"
         tabIndex={0}
         aria-label={`Pieza ${tooth.id}, ${FACE_LABELS.X}`}
