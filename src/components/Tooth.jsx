@@ -86,6 +86,15 @@ export default function Tooth({
     onApplyTreatment(tooth.id, face);
   };
 
+  const handlePointerDown = (event, face) => {
+    if (event.button !== 0) {
+      return;
+    }
+
+    event.preventDefault();
+    onApplyTreatment(tooth.id, face);
+  };
+
   const labelTheme = resolveLabelTheme();
 
   return (
@@ -97,31 +106,40 @@ export default function Tooth({
         filter="url(#tooth-drop-shadow)"
       />
       {FACE_ORDER.map((face) => (
-        <path
-          key={`${tooth.id}-${face}`}
-          className={`tooth-face ${
-            isTreatmentSelected ? "tooth-face--ready" : "tooth-face--idle"
-          }`}
-          d={FACE_PATHS[face]}
-          fill={resolveFill(face)}
-          stroke={FACE_STROKE}
-          strokeWidth={0.42}
-          strokeLinejoin="round"
-          pointerEvents="all"
-          tabIndex={0}
-          role="button"
-          aria-label={`Pieza ${tooth.id}, ${FACE_LABELS[face]}`}
-          onClick={() => onApplyTreatment(tooth.id, face)}
-          onKeyDown={(event) => handleKeyDown(event, face)}
-          onMouseEnter={() => handleMouseEnter(face)}
-          onMouseLeave={handleMouseLeave}
-          onFocus={() => handleMouseEnter(face)}
-          onBlur={handleMouseLeave}
-        >
-          <title>
-            P{tooth.id} - {FACE_LABELS[face]}
-          </title>
-        </path>
+        <g key={`${tooth.id}-${face}`}>
+          <path
+            className="tooth-face-visual"
+            d={FACE_PATHS[face]}
+            fill={resolveFill(face)}
+            stroke={FACE_STROKE}
+            strokeWidth={0.42}
+            strokeLinejoin="round"
+            pointerEvents="none"
+          />
+          <path
+            className={`tooth-face-hitzone ${
+              isTreatmentSelected ? "tooth-face-hitzone--ready" : "tooth-face-hitzone--idle"
+            }`}
+            d={FACE_PATHS[face]}
+            fill="transparent"
+            stroke="transparent"
+            strokeWidth={2.3}
+            pointerEvents="all"
+            tabIndex={0}
+            role="button"
+            aria-label={`Pieza ${tooth.id}, ${FACE_LABELS[face]}`}
+            onPointerDown={(event) => handlePointerDown(event, face)}
+            onKeyDown={(event) => handleKeyDown(event, face)}
+            onMouseEnter={() => handleMouseEnter(face)}
+            onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter(face)}
+            onBlur={handleMouseLeave}
+          >
+            <title>
+              P{tooth.id} - {FACE_LABELS[face]}
+            </title>
+          </path>
+        </g>
       ))}
       <path
         className="tooth-groove"
@@ -135,7 +153,7 @@ export default function Tooth({
         role="button"
         tabIndex={0}
         aria-label={`Pieza ${tooth.id}, ${FACE_LABELS.X}`}
-        onClick={() => onApplyTreatment(tooth.id, "X")}
+        onPointerDown={(event) => handlePointerDown(event, "X")}
         onKeyDown={(event) => handleKeyDown(event, "X")}
         onMouseEnter={() => handleMouseEnter("X")}
         onMouseLeave={handleMouseLeave}

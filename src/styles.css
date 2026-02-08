@@ -560,30 +560,30 @@ body {
   pointer-events: none;
 }
 
-.tooth-face,
+.tooth-face-visual,
 .tooth-label-hitbox rect {
   transition: fill 120ms ease;
 }
 
-.tooth-face {
+.tooth-face-visual {
   transition:
     fill 120ms ease,
     stroke 120ms ease,
     filter 120ms ease;
 }
 
-.tooth-face--ready,
+.tooth-face-hitzone--ready,
 .tooth-label-hitbox--ready {
   cursor: pointer;
 }
 
-.tooth-face--idle,
+.tooth-face-hitzone--idle,
 .tooth-label-hitbox--idle {
   cursor: not-allowed;
 }
 
-.tooth-face--ready:hover {
-  filter: brightness(1.03);
+.tooth-face-hitzone {
+  touch-action: manipulation;
 }
 
 .tooth-groove {
@@ -594,7 +594,7 @@ body {
   pointer-events: none;
 }
 
-.tooth-face:focus-visible,
+.tooth-face-hitzone:focus-visible,
 .tooth-label-hitbox:focus-visible {
   outline: none;
   filter: drop-shadow(0 0 2px rgba(17, 123, 144, 0.85));
