@@ -243,15 +243,17 @@ export default function App() {
         </div>
       </header>
 
-      {notice && (
-        <div
-          className={`feedback-banner feedback-banner--${notice.tone}`}
-          role="status"
-          aria-live="polite"
-        >
-          {notice.message}
-        </div>
-      )}
+      <div className="feedback-slot">
+        {notice && (
+          <div
+            className={`feedback-banner feedback-banner--${notice.tone}`}
+            role="status"
+            aria-live="polite"
+          >
+            {notice.message}
+          </div>
+        )}
+      </div>
 
       <div className="workspace">
         <TreatmentPanel

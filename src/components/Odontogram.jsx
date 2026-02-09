@@ -1,6 +1,5 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Tooth from "./Tooth";
-import { FACE_LABELS } from "../lib/odontogramLayout";
 
 function buildAppliedFacesByTooth(appliedTreatments) {
   const facesByTooth = new Map();
@@ -26,7 +25,6 @@ export default function Odontogram({
     () => buildAppliedFacesByTooth(appliedTreatments),
     [appliedTreatments],
   );
-  const [hoveredArea, setHoveredArea] = useState(null);
 
   return (
     <section className="odontogram-shell">
@@ -54,11 +52,7 @@ export default function Odontogram({
       </div>
 
       <div className="odontogram-hint" role="status" aria-live="polite">
-        {hoveredArea
-          ? `P${hoveredArea.toothId} · ${
-              FACE_LABELS[hoveredArea.face] ?? hoveredArea.face
-            }`
-          : selectedTreatment
+        {selectedTreatment
           ? `Tratamiento activo: ${selectedTreatment.id}`
           : "Seleccione un tratamiento para comenzar."}
       </div>
@@ -103,7 +97,6 @@ export default function Odontogram({
               tooth={tooth}
               appliedFaces={appliedFacesByTooth.get(tooth.id) ?? new Set()}
               onApplyTreatment={onApplyTreatment}
-              onHoverChange={setHoveredArea}
               isTreatmentSelected={Boolean(selectedTreatment)}
             />
           ))}

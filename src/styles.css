@@ -120,13 +120,17 @@ body {
 }
 
 .feedback-banner {
-  margin-top: 0.8rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   padding: 0.72rem 0.9rem;
   font-size: 0.92rem;
   font-weight: 600;
   animation: slide-in 170ms ease-out;
+}
+
+.feedback-slot {
+  min-height: 3.05rem;
+  margin-top: 0.8rem;
 }
 
 .feedback-banner--success {
@@ -546,14 +550,6 @@ body {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: linear-gradient(160deg, #fff 0%, #f9fdff 100%);
-}
-
-.tooth-unit {
-  transition: transform 120ms ease;
-}
-
-.tooth-unit:hover {
-  transform: translateY(-0.05px);
 }
 
 .tooth-shell {

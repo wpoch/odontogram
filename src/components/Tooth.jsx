@@ -43,18 +43,10 @@ const FACE_HIT_POLYGON_POINTS = Object.fromEntries(
   ]),
 );
 
-function makeHoverPayload(toothId, face) {
-  return {
-    toothId,
-    face,
-  };
-}
-
 export default function Tooth({
   tooth,
   appliedFaces,
   onApplyTreatment,
-  onHoverChange,
   isTreatmentSelected,
 }) {
   const [hoveredFace, setHoveredFace] = useState(null);
@@ -81,12 +73,10 @@ export default function Tooth({
 
   const handleMouseEnter = (face) => {
     setHoveredFace(face);
-    onHoverChange?.(makeHoverPayload(tooth.id, face));
   };
 
   const handleMouseLeave = () => {
     setHoveredFace(null);
-    onHoverChange?.(null);
   };
 
   const handleKeyDown = (event, face) => {
