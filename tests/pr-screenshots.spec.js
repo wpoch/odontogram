@@ -1,5 +1,10 @@
 import { test } from "@playwright/test";
 
+test.skip(
+  !process.env.CAPTURE_PR_SCREENSHOTS,
+  "Utility test only used when refreshing PR screenshots.",
+);
+
 test("capture PR screenshots", async ({ page }) => {
   await page.addInitScript(() => {
     window.localStorage.clear();

@@ -9,8 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test",
+    "test:e2e:ci": "playwright test tests/odontogram.e2e.spec.js",
     "test:e2e:headed": "playwright test --headed",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "screenshots:refresh": "CAPTURE_PR_SCREENSHOTS=1 playwright test tests/pr-screenshots.spec.js"
   },
   "repository": {
     "type": "git",
